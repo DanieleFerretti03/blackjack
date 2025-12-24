@@ -8,10 +8,10 @@ MAKEFLAGS += -j$(shell nproc)
 CXX = g++
 
 # Flag comuni
-CXXFLAGS_COMMON = -Wall -Wextra -Wpedantic -Wshadow -Wnull-dereference -std=c++17
+CXXFLAGS_COMMON = -Wall -Wextra -Wpedantic -Wshadow -Wnull-dereference -std=c++20
 
 # Flag per versione release (ottimizzata)
-CXXFLAGS_RELEASE = $(CXXFLAGS_COMMON) -O3 -march=native -DNDEBUG
+CXXFLAGS_RELEASE = $(CXXFLAGS_COMMON) -O3 -march=native
 
 # Flag per versione debug (con gprof e sanitizer)
 CXXFLAGS_DEBUG = $(CXXFLAGS_COMMON) -g -O0 -pg -fsanitize=address -fsanitize=undefined

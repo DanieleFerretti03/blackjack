@@ -1,6 +1,7 @@
 #ifndef MENU_HPP
 #define MENU_HPP
 
+#include <iostream>
 #include <string>
 
 class Menu {
@@ -9,7 +10,8 @@ public:
 
   void startMenu();
 private:
-  
+  std::string getStartingMenu();
+  void fromStartMenuToOther(std::string option);
 };
 
 
